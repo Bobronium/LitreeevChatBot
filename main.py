@@ -14,7 +14,8 @@ logging.basicConfig(level=logging.INFO)
 async def update_title():
     try:
         await bot.set_chat_title(config.LITREEV_CHAT_ID, generate_chat_name())
-    except (exceptions.ChatAdminRequired, exceptions.BotKicked, exceptions.ChatNotFound):
+    except (exceptions.ChatAdminRequired, exceptions.BotKicked, exceptions.ChatNotFound, exceptions.BadRequest):
         pass
+
 
 executor.start_polling(dp)

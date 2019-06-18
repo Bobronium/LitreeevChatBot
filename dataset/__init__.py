@@ -15,7 +15,7 @@ with open(NAMES_FILE, 'r') as names:
     NAMES_COUNT = len([0 for name in names])
 
 
-def get_random_line(filename, file_length):
+def get_random_line(filename: str, file_length: int):
     with open(filename, 'r') as file:
 
         random_line = random.randint(0, file_length)
